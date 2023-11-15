@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Information Form</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(-45deg, #fc466b, #3f5efb, #07eaf2, #fc466b);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite, newBackground 30s ease infinite, additionalBackground 25s ease infinite; /* Combined animations */
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes newBackground {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg); /* Hue rotation for background color variation */
+            }
+        }
+
+        /* Additional Background Animation */
+        @keyframes additionalBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%; /* Your additional background animation here */
+            }
+        }
+
+        .login-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .login-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow effect */
+        }
+
+        .login-box .user-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .login-box .user-box input {
+            width: calc(100% - 20px);
+            padding: 10px 0;
+            font-size: 16px;
+            color: #03e9f4;
+            border: none;
+            border-bottom: 1px solid #03e9f4;
+            background: transparent;
+            outline: none;
+            transition: border-color 0.5s ease;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                border-color: #03e9f4;
+                transform: scale(1);
+            }
+            50% {
+                border-color: #03e9f4;
+                transform: scale(1.1);
+            }
+            100% {
+                border-color: #03e9f4;
+                transform: scale(1);
+            }
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #03e9f4;
+            pointer-events: none;
+            transition: 0.5s;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Text shadow effect */
+        }
+
+        .login-box .user-box input:focus~label,
+        .login-box .user-box input:valid~label {
+            top: -10px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+
+        .login-box form a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #03e9f4;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 0.5s;
+            margin-top: 40px;
+            letter-spacing: 4px;
+            border: 2px solid #03e9f4;
+            border-radius: 5px;
+            background: transparent;
+        }
+
+        .login-box a:hover {
+            background: #03e9f4;
+            color: #fff;
+            box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+        }
+
+        .login-box a span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03e9f4);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #03e9f4);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .login-box .user-box input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #243b55 inset;
+            -webkit-text-fill-color: #03e9f4 !important;
+        }
+
+        .login-box .user-box input:focus {
+            border: 2px solid #03e9f4;
+            transition: border 0.5s ease;
+        }
+
+        .login-box .user-box input:focus~label {
+            color: #03e9f4;
+        }
+
+        /* New hover effect for input fields */
+        .login-box .user-box input:hover {
+            border-color: #fff;
+        }
+
+        /* New animation for the submit button */
+        .login-box a input[type="submit"]:hover + span::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            background: #03e9f4;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: pulseBtn 1.5s ease-out infinite;
+        }
+
+        @keyframes pulseBtn {
+            0% {
+                width: 30px;
+                height: 30px;
+                opacity: 1;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>REGISTRATION</h2>
+        <form id="userForm" name="f1" method="post" action="reg.php">
+            <div class="user-box">
+                <input type="text" id="username" name="t1" required>
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="password" name="t2" required>
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input type="email" id="email" name="t3" required>
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="tel" id="mobile" name="t4" required>
+                <label>Mobile Number</label>
+            </div>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <input type="submit" value="Submit" style="background: transparent; color: #03e9f4; border: none;">
+            </a>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <input type="reset" value="clear" style="background: transparent; color: #03e9f4; border: none;">
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>
