@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($result)) {
     if ($row["username"] == $un && $row["password"] == $pd) {
         $c = 1;
-        header("location: profile.php");
+        header("location: code_editor.html");
         exit(); 
     }
 }
