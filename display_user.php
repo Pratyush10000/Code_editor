@@ -1,8 +1,8 @@
 <?php
-// Assuming your $conn variable is defined in a separate file like "dbconnect.php" and included here
+
 include("dbconnect.php");
 
-$sql = "SELECT * FROM student"; // Corrected "SECLECT" to "SELECT" and added spaces
+$sql = "SELECT * FROM student"; 
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
