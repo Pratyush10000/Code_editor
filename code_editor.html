@@ -12,28 +12,28 @@
       margin: 0;
       background-color: #fff;
       color: #333;
-      overflow: hidden; /* Hide the horizontal scrollbar */
+      overflow: hidden; 
     }
 
     .header {
       background: linear-gradient(45deg, #3498db, #e74c3c);
       color: #fff;
       padding: 10px;
-      opacity: 0; /* Initial opacity for animation */
-      animation: pulsate 2s infinite, fadeInDown 1s ease-in-out forwards; /* Pulsating and fading animation */
-      border-radius: 10px; /* Rounded corners */
-      transition: transform 0.3s ease, background 0.5s ease, box-shadow 0.3s ease, font-size 0.3s ease; /* Added transitions for smooth transformation */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-      font-size: 18px; /* Reduced font size */
+      opacity: 0; 
+      animation: pulsate 2s infinite, fadeInDown 1s ease-in-out forwards; 
+      border-radius: 10px; 
+      transition: transform 0.3s ease, background 0.5s ease, box-shadow 0.3s ease, font-size 0.3s ease; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      font-size: 18px; 
       position: relative;
       overflow: hidden;
     }
 
     .header:hover {
-      transform: translateY(-5px); /* Adjusted translation on hover */
-      background: linear-gradient(45deg, #e74c3c, #3498db); /* Updated gradient on hover */
-      font-size: 20px; /* Increased font size on hover */
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+      transform: translateY(-5px);
+      background: linear-gradient(45deg, #e74c3c, #3498db); 
+      font-size: 20px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
     }
 
     @keyframes pulsate {
@@ -71,23 +71,23 @@
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-      font-weight: bold; /* New styles for login and registration buttons */
-      display: inline-block; /* Added display property for inline-block behavior */
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease, box-shadow 0.3s ease; 
+      font-weight: bold; 
+      display: inline-block; 
       position: relative;
     }
 
     .user-button:hover,
     .registration-button:hover {
       background-color: #2980b9;
-      transform: scale(1.05); /* Scale on hover */
-      color: #fff; /* Adjusted text color on hover */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box shadow on hover */
+      transform: scale(1.05); 
+      color: #fff; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     }
 
     .user-button:active,
     .registration-button:active {
-      background-color: #1f618d; /* Darker color when button is clicked */
+      background-color: #1f618d; 
     }
 
     .user-button:last-child {
@@ -96,13 +96,13 @@
 
     .user-button:last-child:hover {
       background-color: #c0392b;
-      transform: scale(1.05); /* Scale on hover */
-      color: #fff; /* Adjusted text color on hover */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box shadow on hover */
+      transform: scale(1.05); 
+      color: #fff; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     }
 
     .user-button:last-child:active {
-      background-color: #922b21; /* Darker color when button is clicked */
+      background-color: #922b21; 
     }
 
     .registration-button {
@@ -114,28 +114,28 @@
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-      font-style: italic; /* New styles for registration button */
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease, box-shadow 0.3s ease; 
+      font-style: italic; 
     }
 
     .registration-button:hover {
       background-color: #27ae60;
-      transform: scale(1.05); /* Scale on hover */
-      color: #fff; /* Adjusted text color on hover */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added box shadow on hover */
+      transform: scale(1.05); 
+      color: #fff; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     }
 
     .registration-button:active {
-      background-color: #196f3d; /* Darker color when button is clicked */
+      background-color: #196f3d; 
     }
 
     .code-area {
       display: flex;
       justify-content: space-around;
       margin: 0 auto;
-      opacity: 0; /* Initial opacity for animation */
-      animation: fadeIn 1s ease-in-out forwards, backgroundAnimation 5s infinite linear, glow 1s infinite; /* Added glow animation for code area */
-      perspective: 1000px; /* Perspective for 3D effect */
+      opacity: 0; 
+      animation: fadeIn 1s ease-in-out forwards, backgroundAnimation 5s infinite linear, glow 1s infinite; 
+      perspective: 1000px; 
       position: relative;
     }
 
@@ -158,7 +158,7 @@
     }
 
     .code-area:hover {
-      background-color: #ecf0f1; /* Change background color on hover */
+      background-color: #ecf0f1; 
     }
 
     textarea {
@@ -173,14 +173,14 @@
       box-sizing: border-box;
       font-family: 'Fira Code', monospace;
       font-size: 16px;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
       transform-style: preserve-3d;
       position: relative;
       z-index: 0;
     }
   
     .code-area:hover textarea {
-      transform: translateZ(10px); /* Parallax scrolling effect on hover */
+      transform: translateZ(10px); 
     }
   
     textarea:hover {
@@ -190,7 +190,7 @@
       border-color: #3498db;
       position: relative;
       z-index: 1;
-      transform: scale(1.05); /* Scale on hover */
+      transform: scale(1.05); 
     }
   
     textarea:before {
@@ -228,7 +228,7 @@
       margin: 0;
     }
   
-    /* Add the following styles to customize scrollbar appearance */
+    
     textarea::-webkit-scrollbar {
       width: 10px;
     }
@@ -241,7 +241,7 @@
       background-color: transparent;
     }
   
-    /* Syntax highlighting colors */
+    
     textarea::selection {
       background-color: #3498db;
       color: #fff;
@@ -259,7 +259,7 @@
       color: #2ecc71;
     }
   
-    /* Additional styles for the rotate animation */
+    
     @keyframes rotate {
       0% {
         transform: rotate(0deg);
@@ -269,7 +269,7 @@
       }
     }
   
-    /* Additional pulse animation for buttons on hover */
+    
     .user-button:hover::after,
     .registration-button:hover::after {
       content: '';
@@ -295,7 +295,6 @@
       }
     }
   
-    /* Additional glow animation for code area */
     @keyframes glow {
       0%, 100% {
         box-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(52, 152, 219, 0.8), 0 0 30px rgba(52, 152, 219, 0.8);
